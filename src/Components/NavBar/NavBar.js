@@ -1,4 +1,4 @@
-import './App.css';
+import './NavBar.css';
 
 // import React, { useState } from "react";
 
@@ -21,9 +21,9 @@ import './App.css';
     return (
      
          <ul className="NavBar">
-         <li><a href="/">HOME </a> </li>
-         <li><a href="/Projects"> PROJECTS</a> </li>
-         <li><a href="/Teachers">TEACHERS </a> </li>
+         <li><a href="Home.js">HOME </a> </li>
+         <li><a href="Projects.js"> PROJECTS</a> </li>
+         <li><a href="Teachers.js">TEACHERS </a> </li>
            
           </ul>
         

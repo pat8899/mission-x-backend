@@ -9,25 +9,10 @@
   grid-template-columns: repeat(5, auto);
   background-color: rgb(70, 133, 228);
   min-height: 1vh;
-  
-  margin: 20px 20px;
+    margin: 20px 20px;
   padding: 3px;
 }
 
-.NavBar {
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  grid-gap: 80px;
-  font-size: 12px;
-  list-style: none;
-  text-align: center;
-  width: 30vw;
-  justify-content: center;
-  margin: 0px, 10px;
-
-
-  
-}
 .flag {
   display: flex;
   margin: 2px 10px;
@@ -63,14 +48,17 @@
 .show {
   font-size: 12px;
 }
-.number {
+.numbers {
   display: grid;
   grid-template-columns: 40px 40px 40px 40px;
   grid-column: end-line;
    padding: 5px;
    margin: 0px 10px;
-   font-size: 8px;
-   list-style: none;
+}
+.endButtons {
+ display: flex;
+  align-items: flex-end;
+
 }
 
 .hr {
@@ -83,52 +71,8 @@
   display: flex;
   justify-content: center;
 }
-
-.pic {
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  justify-items:flex-end;
-  grid-gap: 0px;
-  height:auto;
- width: 250px;
-  margin: 10px 5px 10px;
-  padding: 0px; 
-  list-style: none;
-  
-}
-
-.pictures {
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  grid-gap: 0px;
-  justify-items:flex-end;
-  height:auto;
-  list-style: none;
-  margin: 10px 5px 10px;
-  padding: 5px; 
-  
-}
- 
-.columnPic {
-  display: grid;
-  justify-items:flex-end;
-  list-style: none;
-  grid-gap: 0px;
-  justify-content: center;
- 
-}
-
-
-.h4 {
-  display: grid;
-  list-style: none;
-  justify-self: center;
-}
-.p3 {
-  display: grid;
-  list-style: none;
-  justify-self: center;
-  font-size: 12px;
-
-
+.Sidebar {
+  height: 50%;
+  width: 300px;
+  background-color: white ;
 }
