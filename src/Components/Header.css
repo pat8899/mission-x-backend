@@ -1,0 +1,87 @@
+.container {
+    max-width: 960px;
+    margin: 0 auto
+}
+.header {
+    background: #43c1f7;
+    height: 60px;
+}
+.header-con {
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    align-items: center;
+}
+.logo-container img {
+    padding: 1px;
+    max-width: 90px;
+}
+.logo-container a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 2rem;
+}
+.menu {
+    display: flex ;
+    list-style-type: none;
+}
+.menu li {
+    padding: 1 rem;
+    display: flex;
+    list-style-type: none;
+    margin-bottom: 0rem;
+    padding-top: 1rem;
+}
+.menu li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 1rem;
+    font-size: 14px;
+}
+.nav-r-container {
+    padding: 2px;
+    max-width: 90px;
+    max-height: 40px;
+    align-items: flex-end;
+}
+.lang-con {
+    align-items: right;
+}
+.flag img {
+    max-height: 10px;
+    padding: 1 rem;
+    align-items: flex-start;
+    display: flex;
+}
+.lang-con img {
+    display: flex;
+    max-height: 10px;
+    padding: 1 rem;
+}
+user-container {
+    display: flex;
+}
+user-container img {
+    max-height: 10px;
+}
+.register {
+    max-height: 10px;
+}
+.menu-user {
+    padding: 1 rem;
+    display: flex;
+    align-items: baseline;
+}
+.menu-user li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 1rem;
+}
+.lang-con p {
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+}
