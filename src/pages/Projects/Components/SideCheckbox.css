@@ -1,0 +1,10 @@
+.SideBar {
+    display: flex;
+    flex-direction: column;
+    grid-row: start-line;
+    justify-self: start;
+    justify-items: flex-start;
+    margin: 0px,10px 10px;
+    padding: 0px;
+    
+}
