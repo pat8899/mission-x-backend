@@ -71,8 +71,10 @@
   display: flex;
   justify-content: center;
 }
-.Sidebar {
-  height: 50%;
-  width: 300px;
-  background-color: white ;
+
+.sidePic {
+  display: grid;
+  justify-items: start; 
+  grid-column: start-line;
+  margin: 0px 100px;
 }
