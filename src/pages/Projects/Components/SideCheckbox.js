@@ -27,14 +27,16 @@ class SideCheckbox extends React.Component {
   render() {
     return (
       <div className="SideBar">
-        <h4>SUBSCRIPTION</h4>
-        <hr className="hr"/>
+       
+   
+       <div className="H4"><h4>SUBSCRIPTION</h4></div>
+        <div><hr className="hr"/></div>
         <div><input type="checkbox" name="Free" onChange={this.chkclick} />Free</div>
         <div><input type="checkbox" name="Premium" onChange={this.chkclick} />Premium</div>
          <br />
          <br/>
         <h4>ACTIVITY TYPE</h4>
-        <hr className="hr" />
+       <div> <hr className="hr" /></div>
        <div><input type="checkbox" name="Animation" onChange={this.chkclick} />Animation</div>
        <div><input type="checkbox" name="Game" onChange={this.chkclick}/>Game</div>
        <div><input type="checkbox" name="Chatbot" onChange={this.chkclick}/>Chatbot</div>
@@ -42,7 +44,7 @@ class SideCheckbox extends React.Component {
          <br />
          <br/>
         <h4>YEAR LEVEL</h4>
-        <hr className="hr" />
+       <div> <hr className="hr" /></div>
         <div><input type="checkbox" name="1-4" onChange={this.chkclick} />1-4</div>
         <div><input type="checkbox" name="5-6" onChange={this.chkclick} />5-6</div>
         <div><input type="checkbox" name="7-8" onChange={this.chkclick} />7-8</div>
@@ -50,7 +52,7 @@ class SideCheckbox extends React.Component {
         <br />
         <br />
         <h4>SUBJECT MATTER</h4>
-        <hr className="hr"/>
+       <div> <hr className="hr"/></div>
         <div><input type="checkbox" name="Computer Science" onChange={this.chkclick} />Computer Science</div>
         <div><input type="checkbox" name="Maths" onChange={this.chkclick} />Maths</div>
          <div><input type="checkbox" name="Science" onChange={this.chkclick} />Science<div></div>
