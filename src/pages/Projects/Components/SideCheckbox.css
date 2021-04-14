@@ -8,3 +8,11 @@
     padding: 0px;
     
 }
+
+.H4 {
+    display: flex;
+    flex-direction: column;
+    grid-row: start-line;
+    margin: 0px;
+    padding: 0px;
+}
