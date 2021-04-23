@@ -22,6 +22,10 @@ function App() {
       <Contentb />
       <Contentcomp />
       <Contentstart />
+    <div className="sidePic">
+        <SideCheckbox />
+        <Projects />
+        </div>
       <Footer />
       <NavBar />
       <NavBar2 />
