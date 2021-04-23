@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./SideCheckbox.css";
 class SideCheckbox extends React.Component {
   state = {
     Colornames: {
@@ -22,66 +22,43 @@ class SideCheckbox extends React.Component {
     },
   };
   
-  chkclick = (e) => {
-    var { name, checked } = e.target;
-
-    this.setstat((e) => {
-      var Selectedthings = e.Colornames;
-      return (Selectedthings[name] = checked);
-    });
-  };
+  
 
   render() {
     return (
       <div className="SideBar">
-        <h3>SUBSCRIPTION</h3>
-        <hr />
-        <input type="checkbox" name="Free" OnChange={this.chkclick} />
-        Free;
-        <input type="checkbox" name="Premium" OnChange={this.chkclick} />
-        Premium; &nbsp &nbsp
-        <h3>ACTIVITY TYPE</h3>
-        <hr />
-        <input type="checkbox" name="Animation" OnChange={this.chkclick} />
-        Animation;
-        <input type="checkbox" name="Game" OnChange={this.chkclick} />
-        Game;
-        <input type="checkbox" name="Chatbot" OnChange={this.chkclick} />
-        Chatbot;
-        <input
-          type="checkbox"
-          name="Augmented Reality"
-          OnChange={this.chkclick}
-        />
-        Augmented Reality; &nbsp &nbsp
-        <h3>YEAR LEVEL</h3>
-        <hr />
-        <input type="checkbox" name="1-4" OnChange={this.chkclick} />
-        1-4;
-        <input type="checkbox" name="5-6" OnChange={this.chkclick} />
-        5-6;
-        <input type="checkbox" name="7-8" OnChange={this.chkclick} />
-        7-8;
-        <input type="checkbox" name="9-13" OnChange={this.chkclick} />
-        9-13; &nbsp &nbsp
-        <h3>SUBJECT MATTER</h3>
-        <hr />
-        <input
-          type="checkbox"
-          name="Computer Science"
-          OnChange={this.chkclick}
-        />
-        Computer Science;
-        <input type="checkbox" name="Maths" OnChange={this.chkclick} />
-        Maths;
-        <input type="checkbox" name="Science" OnChange={this.chkclick} />
-        Science;
-        <input type="checkbox" name="Language" OnChange={this.chkclick} />
-        Language;
-        <input type="checkbox" name="Art" OnChange={this.chkclick} />
-        Art;
-        <input type="checkbox" name="Music" OnChange={this.chkclick} />
-        Music;
+       
+   
+       <div className="H4"><h4>SUBSCRIPTION</h4></div>
+        <div><hr className="hr"/></div>
+        <div><input type="checkbox" name="Free" onChange={this.chkclick} />Free</div>
+        <div><input type="checkbox" name="Premium" onChange={this.chkclick} />Premium</div>
+         <br />
+         <br/>
+        <h4>ACTIVITY TYPE</h4>
+       <div> <hr className="hr" /></div>
+       <div><input type="checkbox" name="Animation" onChange={this.chkclick} />Animation</div>
+       <div><input type="checkbox" name="Game" onChange={this.chkclick}/>Game</div>
+       <div><input type="checkbox" name="Chatbot" onChange={this.chkclick}/>Chatbot</div>
+       <div><input type="checkbox" name="Augmented Reality" onChange={this.chkclick}/>Augmented Reality</div>
+         <br />
+         <br/>
+        <h4>YEAR LEVEL</h4>
+       <div> <hr className="hr" /></div>
+        <div><input type="checkbox" name="1-4" onChange={this.chkclick} />1-4</div>
+        <div><input type="checkbox" name="5-6" onChange={this.chkclick} />5-6</div>
+        <div><input type="checkbox" name="7-8" onChange={this.chkclick} />7-8</div>
+        <div><input type="checkbox" name="9-13" onChange={this.chkclick} />9-13</div> 
+        <br />
+        <br />
+        <h4>SUBJECT MATTER</h4>
+       <div> <hr className="hr"/></div>
+        <div><input type="checkbox" name="Computer Science" onChange={this.chkclick} />Computer Science</div>
+        <div><input type="checkbox" name="Maths" onChange={this.chkclick} />Maths</div>
+         <div><input type="checkbox" name="Science" onChange={this.chkclick} />Science<div></div>
+        <input type="checkbox" name="Language" OnChange={this.chkclick} />Language</div>
+        <div><input type="checkbox" name="Art" OnChange={this.chkclick} />Art</div>
+        <div><input type="checkbox" name="Music" OnChange={this.chkclick} />Music</div>
       </div>
     );
   }

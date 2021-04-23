@@ -1,12 +1,6 @@
-
 .NavBar {
   display: grid;
-  grid-template-columns: repeat(3, auto);
-  grid-gap: 80px;
-  font-size: 12px;
-  list-style: none;
-  text-align: center;
-  width: 30vw;
-  justify-content: center;
-  margin: 0px, 10px;
-}
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  
+} 
+

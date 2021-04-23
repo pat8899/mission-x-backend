@@ -19,99 +19,28 @@ import Project14 from "../../assets/projects/Project14.jpg";
 import Project15 from "../../assets/projects/Project15.jpg";
 
 const Projects = () => {
-  // return (
-  // <div className="pictures">
-  //   <div className="columnPic">
-  //     <div>
-  //       <img className="pic" src={Project01} alt="Project01" />
-  //       <h4 className="h4"> Introduction </h4>{" "}
-  //       <p className="p3"> BEGINNER | ANIMATION </p>{" "}
-  //     </div>
-  //     <div>
-  //       <img className="pic" src={Project02} alt="Project02" />
-  //       <h4 className="h4"> My Birthday </h4>{" "}
-  //       <p className="p3"> BEGINNER | ANIMATION </p>
-  //     </div>{" "}
-  //     <div>
-  //       <img className="pic" src={Project03} alt="Project03" />
-  //       <h4 className="h4"> 10 Block Challenge </h4>{" "}
-  //       <p className="p3"> BEGINNER | ANIMATION </p>{" "}
-  //     </div>{" "}
-  //   </div>{" "}
-  //   <div>
-  //     <div className="columnPic">
-  //       <div>
-  //         <img className="pic" src={Project04} alt="Project04" />
-  //         <h4 className="h4"> Build a band </h4>{" "}
-  //         <p className="p3"> BEGINNER | ANIMATION </p>
-  //       </div>
-  //       <div>
-  //         <img className="pic" src={Project05} alt="Project05" />
-  //         <h4 className="h4"> The bear and the monkey </h4>{" "}
-  //         <p className="p3"> BEGINNER | ANIMATION </p>
-  //       </div>
-  //       <div>
-  //         <img className="pic" src={Project06} alt="Project06" />
-  //         <h4 className="h4"> Debugging </h4>{" "}
-  //         <p className="p3"> BEGINNER | ANIMATION </p>{" "}
-  //       </div>{" "}
-  //     </div>{" "}
-  //   </div>
-  //   <div>
-  //     <div className="columnPic">
-  //       <div>
-  //         <img className="pic" src={Project07} alt="Project07" />
-  //         <h4 className="h4"> About me </h4>{" "}
-  //         <p className="p3"> BEGINNER | ANIMATION </p>{" "}
-  //       </div>
-  //       <div>
-  //         <img className="pic" src={Project08} alt="Project08" />
-  //         <h4 className="h4"> I am here </h4>{" "}
-  //         <p className="p3"> BEGINNER | ANIMATION </p>
-  //       </div>
-  //       <div>
-  //         <img className="pic" src={Project09} alt="Project09" />
-  //         <h4 className="h4"> Funny faces </h4>{" "}
-  //         <p className="p3"> BEGINNER | ANIMATION </p>{" "}
-  //       </div>{" "}
-  //     </div>{" "}
-  //   </div>
-  //   <div>
-  //     <div className="columnPic">
-  //       <div>
-  //         <img className="pic" src={Project10} alt="Project10" />
-  //         <h4 className="h4"> It tickles </h4>{" "}
-  //         <p className="p3"> BEGINNER | ANIMATION </p>
-  //       </div>
-  //       <div>
-  //         <img className="pic" src={Project11} alt="Project11" />
-  //         <h4 className="h4"> Penguin in a Desert </h4>{" "}
-  //         <p className="p3"> BEGINNER | ANIMATION </p>
-  //       </div>
-  //       <div>
-  //         <img className="pic" src={Project12} alt="Project12" />
-  //         <h4 className="h4"> Time Travel </h4>{" "}
-  //         <p className="p3"> BEGINNER | ANIMATION </p>{" "}
-  //       </div>{" "}
-  //     </div>{" "}
-  //   </div>
-  //   <div>
-  //     <div className="columnPic">
+ <div>
+  <h3 className="h3">Projects</h3>
+  <p className="p1">
+  Welcome to the project library. You can use the filters on the roght to
+   help you search for specific Projects.
+  </p>
 
-  //       <div>
-  //         <img className="pic" src={Project14} alt="Project14" />
-  //         <h4 className="h4"> The Lion and the Mouse Part 1 </h4>{" "}
-  //         <p className="p3"> BEGINNER | ANIMATION </p>
-  //       </div>
-  //       <div>
-  //         <img className="pic" src={Project15} alt="Project15" />
-  //         <h4 className="h4"> The Lion and the </h4>{" "}
-  //         <p className="p3"> BEGINNER | ANIMATION </p>{" "}
-  //       </div>{" "}
-  //     </div>{" "}
-  //   </div>{" "}
-  // </div>
-  // );
+ <div className="buttons">
+   <button className="button">
+     <a href="/Beginner.js">BEGINNER</a>
+   </button>
+ <button className="button">INTERMEDIATE</button>
+ <button className="button">ADVANCED</button>
+
+  <div className="numbers">
+     <p className="show">Show</p>
+     <button className="number">25</button>
+     <button className="number">50</button>
+     <button className="number">100</button>
+   </div>
+</div>
+</div>
   const projects = [
     
     { title: "Introduction", difficulty: "BEGINNER", imageURL: Project01, ActivityType: "Animation" },
@@ -144,8 +73,12 @@ const Projects = () => {
           </div>
           
         );
-      })}
+        
+      }
+      )}
     </div>
+    
+    
   );
 };
 

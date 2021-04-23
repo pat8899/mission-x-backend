@@ -1,11 +1,9 @@
 import React from "react";
-// import Container from '@material-ui/core/Container';
-// import Box from '@material-ui/core/Box';
-// import Row from '@material-ui/core/Row';
+import Container from '@material-ui/core/Container';
+import Box from '@material-ui/core/Box';
+import Row from '@material-ui/core/Row';
 // import Column from '@material-ui/core/Column';
-import {Box, Container, Row, Column, FooterLink, 
-  Heading,
-} from "./FooterStyles.js";
+import "./Footer.css"
   
 function Footer () {
   return (

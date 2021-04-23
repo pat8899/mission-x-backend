@@ -1,0 +1,44 @@
+.AppHeader {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    background-color: rgb(70, 133, 228);
+    min-height: 1vh;
+      margin: 20px 20px;
+    padding: 3px;
+  }
+  
+  .flag {
+    display: flex;
+    margin: 2px 10px;
+    height: 35px;
+    width: 50px;
+    height: 20px;
+  }
+  .lang {
+    display: flex;
+    margin: 0px 3px;
+    font-size: 11px; 
+  }
+  
+  .Star {
+    display: flex;
+    margin: 0px 160px;
+    height: 35px;
+    }
+  
+  .NavBar {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 80px;
+    font-size: 12px;
+    list-style: none;
+    text-align: center;
+    width: 30vw;
+    margin: 0px, 10px;
+  }
+  
+  .p1 {
+    display: flex;
+    justify-content: center;
+  }
+  
