@@ -1,9 +1,8 @@
 import React from "react";
 
-import NavBar from "./Components/NavBar/NavBar";
-import NavBar2 from "./Components/NavBar/NavBar2";
-import Buttonend from "./projects/Components/Buttonend";
-import SideCheckbox from "./pages/Projects/Components/SideCheckbox";
+// import NavBar from "./Components/NavBar/NavBar";
+// import Buttonend from "./pages/projects/Buttonend.js";
+// import SideCheckbox from "../pages/Projects/SideCheckbox.js";
 import Navbar from './Components/Navbar'
 import Banner from './Components/Banner'
 import Contentoffer from './Components/Contentoffer'
@@ -22,19 +21,13 @@ function App() {
       <Contentb />
       <Contentcomp />
       <Contentstart />
-    <div className="sidePic">
-        <SideCheckbox />
-        <Projects />
-        </div>
       <Footer />
-      <NavBar />
-      <NavBar2 />
-      <bodyPage />
-      <div className="sidePic">
-        <SideCheckbox />
+      <Navbar />
+   <div className="sidePic">
+        {/* <SideCheckbox /> */}
         <Projects />
-        </div>
-        <Buttonend />
+   </div>
+        {/* <Buttonend /> */}
       <Footer />
     </div>
   );

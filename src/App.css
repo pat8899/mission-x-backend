@@ -119,7 +119,6 @@
   display: flex;
   justify-content: center;
 }
-<<<<<<< HEAD
 .pictures {
   display: grid;
   grid-template-columns: repeat(3, auto);
@@ -131,16 +130,9 @@
   margin: 10px 5px 10px;
   padding: 5px;
 }
-=======
-
->>>>>>> e1d6defab27571c94eea1f94634894cde7ef5735
 .sidePic {
   display: grid;
   justify-items: start; 
   grid-column: start-line;
   margin: 0px 100px;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> e1d6defab27571c94eea1f94634894cde7ef5735
