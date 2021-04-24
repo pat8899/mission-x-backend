@@ -1,8 +1,8 @@
 import React from "react";
 
-// import NavBar from "./Components/NavBar/NavBar";
-// import Buttonend from "./pages/projects/Buttonend.js";
-// import SideCheckbox from "../pages/Projects/SideCheckbox.js";
+import NavBar from "../pages/NavBar";
+import Buttonend from "../pages/Buttonend.js";
+import SideCheckbox from "../pages/SideCheckbox.js";
 import Navbar from './Components/Navbar'
 import Banner from './Components/Banner'
 import Contentoffer from './Components/Contentoffer'
@@ -22,12 +22,12 @@ function App() {
       <Contentcomp />
       <Contentstart />
       <Footer />
-      <Navbar />
+      <NavBar />
    <div className="sidePic">
-        {/* <SideCheckbox /> */}
+        <SideCheckbox />
         <Projects />
    </div>
-        {/* <Buttonend /> */}
+        <Buttonend />
       <Footer />
     </div>
   );
