@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+# Sample Node project structure
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+There is no recommended project structure at all for node.js projects. It varies extremely based on the project. However, this repo contains a basic folder structure which could be modified/refactored as the project progresses.
 
-## Available Scripts
+There are definitely many things you can do better or in a more efficient way, but we'll start with this one.
 
-In the project directory, you can run:
+## Structure used
 
-### `npm start`
+We have the following structure currently.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```
+|--src
+|  |-config
+|  |-constants
+|  |-controllers
+|  |-middlewares
+|  |-routes
+|  |-utils
+|  |-models
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Heroku Deployment Steps (Optional)
 
-### `npm test`
+1.  Create an account with https://www.heroku.com/
+2.  Download and install the Heroku CLI https://devcenter.heroku.com/articles/heroku-cli#download-and-install
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+        npm install -g heroku
+        heroku --version
 
-### `npm run build`
+3.  Run `heroku login` to authenticate the CLI tool
+4.  Go to the React project folder and type `heroku create missionx-demo-app-name` command.
+5.  Check to see if the Heroku remote is added using `git remote -v`. If not, run `heroku git:remote -a missionx-demo-app-name` to add a remote for heroku.
+6.  Add node version to `package.json`.
+        "engines": {
+          "node": "12.x"
+        }
+7.  Add environment variable to Heroku https://devcenter.heroku.com/articles/config-vars  
+8.  Commit the changes and run `git push heroku master` to deploy changes to Heroku whenever required.
+    If you're on a non-master branch, you need to run `git push heroku currentBranchName:master`
+9.  Run `heroku logs --tail` to debug any issues.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## References
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Heroku Deployment - https://devcenter.heroku.com/categories/deployment
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+https://dev.to/santypk4/bulletproof-node-js-project-architecture-4epf
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+https://dev.to/juliest88/how-to-build-rest-api-with-nodejs-express-and-mysql-31jk
