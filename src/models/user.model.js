@@ -1,14 +1,14 @@
 const { getPool } = require('../db');
 const pool = getPool();
 
-/**
- CREATE TABLE `demo`.`users` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `name` VARCHAR(90) NOT NULL,
-  `email` VARCHAR(255) NOT NULL,
-  `password` CHAR(60) NOT NULL,
-  PRIMARY KEY (`id`));
-*/
+
+//  CREATE TABLE `demo`.`users` (
+//   `id` INT NOT NULL AUTO_INCREMENT,
+//   `name` VARCHAR(90) NOT NULL,
+//   `email` VARCHAR(255) NOT NULL,
+//   `password` CHAR(60) NOT NULL,
+//   PRIMARY KEY (`id`));
+
 
 // CREATE TABLE `userImages` (
 //   `id` int NOT NULL AUTO_INCREMENT,
@@ -34,7 +34,7 @@ const getPassword = (email) => {
     const [
       rows,
     ] = await connection.execute(
-      'SELECT `users`.`password` FROM `demo`.`users` WHERE `users`.`email` = ?;',
+      'SELECT `users`.`password` FROM `MissionX-ssp`.`users` WHERE `users`.`email` = ?;',
       [email],
     );
     return rows;
