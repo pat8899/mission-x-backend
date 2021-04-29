@@ -2,10 +2,8 @@ const { getAllProjects } = require('../models/project.model');
 const { resultToJSON } = require('../utils');
 
 const get = async (req, res) => {
-  const { langCode } = req.body;
-  if (langCode) {
-    // The DB query is run and result to the user returned here.
-    const queryResult = await getAllProjects(langCode);
+    console.log('Inside project controller get')
+    const queryResult = await getAllProjects();
     const jsonResult = resultToJSON(queryResult);
 
     if (jsonResult.length === 0) {
@@ -14,10 +12,10 @@ const get = async (req, res) => {
     } else {
       res.status(200).json(jsonResult);
     }
-  } else {
-    console.error('Error: Missing Parameter');
-    res.status(400).send('Missing Parameter');
-  }
+  // else {
+  //   console.error('Error: Missing Parameter');
+  //   res.status(400).send('Missing Parameter');
+  // }
 };
 
 const getOne = async (req, res) => {
