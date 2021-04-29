@@ -22,9 +22,19 @@ const register = (name, email, passwordHash) => {
     const [
       rows,
     ] = await connection.execute(
-      'INSERT INTO `demo`.`users` (`name`,`email`,`password`) VALUES (?, ?, ?);',
+      'INSERT INTO `MissionX-ssp`.`users` (`name`,`email`,`password`) VALUES (?, ?, ?);',
       [name, email, passwordHash],
     );
+    return rows;
+  });
+};
+
+const getProfile = (userID) => {
+  return pool.then(async (connection) => {
+    const [
+      rows,
+    ] = await connection.execute('SELECT `user_mx_ssp`.`School`, `user_mx_ssp`.`Name`, `user_mx_ssp`.`TeacherID`, `user_mx_ssp`.`DateOfBirth`, `user_mx_ssp`.`ContactNumber`, `user_mx_ssp`.`Email`, `Project`.`Course`FROM `MissionX-ssp`.`user_mx_ssp` INNER JOIN `MissionX-ssp`.`Progresshistory` ON `user_mx_ssp`.`﻿UserID` = `Progresshistory`.`﻿UserID`INNER JOIN `MissionX-ssp`.`Project` ON `Progresshistory`.`ProjectID` = `Project`.`﻿ProjectID` WHERE `user_mx_ssp`.`﻿UserID` = ?;'
+     , [userID]);
     return rows;
   });
 };
@@ -66,4 +76,4 @@ const getUserProfilePic = (id) => {
 
 
 
-module.exports = { registerUser: register, getPassword, updateBLOB, getUserProfilePic };
+module.exports = { registerUser: register, getPassword, updateBLOB, getUserProfilePic, getProfile };

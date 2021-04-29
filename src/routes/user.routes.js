@@ -10,6 +10,7 @@ const {
   resetPassword,
   uploadProfilePic,
   getProfilePic,
+  getProfileInfo
 } = require('../controllers/user.controller');
 
 const router = Router();
@@ -19,6 +20,9 @@ router.post('/login', login);
 
 // /api/user + /register
 router.post('/register', register);
+
+// get a student's profile info => /api/user/profile
+router.get('/profile/:id', getProfileInfo);
 
 // /api/user + /reset
 router.post('/reset', resetPassword);

@@ -1,10 +1,11 @@
-const { resultToJSON, getSaltedHash, checkPassword } = require('../utils');
+const { resultToJSON, getSaltedHash, checkPassword } = require("../utils");
 const {
   getPassword,
   registerUser,
   updateBLOB,
   getUserProfilePic,
-} = require('../models/user.model');
+  getProfile,
+} = require("../models/user.model");
 
 // The login controller which is called when we localhost:4000/api/user/login
 const login = async (req, res) => {
@@ -16,17 +17,27 @@ const login = async (req, res) => {
   const jsonResult = resultToJSON(queryResult);
 
   if (jsonResult.length === 0) {
-    res.status(401).send('Could not find a user with the provided email id');
+    res.status(401).send("Could not find a user with the provided email id");
   } else {
     const [{ password: passwordHash }] = jsonResult;
     // const isValidPassword = checkPassword(password, passwordHash);
     const isValidPassword = true;
     if (isValidPassword) {
-      res.status(200).send('Successfully logged in user!');
+      res.status(200).send("Successfully logged in user!");
     } else {
-      res.status(401).send('Invalid password.');
+      res.status(401).send("Invalid password.");
     }
   }
+};
+
+const getProfileInfo = async (req, res) => {
+  const { id } = req.params;
+  const queryResult = await getProfile(id);
+  const jsonResult = resultToJSON(queryResult);
+  if (jsonResult.length === 0) {
+    res.status(401).send("Could not find a user with the provided id");
+  }
+  res.status(200).send(jsonResult);
 };
 
 const register = async (req, res) => {
@@ -42,9 +53,9 @@ const resetPassword = async (req, res) => {
   console.log({ email, oldPassword, newPassword });
 
   if (oldPassword === newPassword) {
-    res.status(200).send('Password reset successfully');
+    res.status(200).send("Password reset successfully");
   } else {
-    res.status(400).send('Mismatch ! Please check your password.');
+    res.status(400).send("Mismatch ! Please check your password.");
   }
 };
 
@@ -55,7 +66,7 @@ const getProfilePic = async (req, res) => {
   const jsonResult = resultToJSON(queryResult);
 
   const { image, mimeType } = jsonResult[0];
-  const encoding = 'base64';
+  const encoding = "base64";
   // Data URIs - https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs
   // Structure of the URI || data:[<mime type>][;charset=<charset>][;base64],<encoded data>
   // Example              || data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABNwAAAKmCAYAA...
@@ -66,14 +77,14 @@ const getProfilePic = async (req, res) => {
 // Multer => a Buffer => Base64 String => Inserted into DB
 const uploadProfilePic = async (req, res) => {
   const { buffer, mimetype } = req.file; // Multer puts together the file key with a Array Buffer.
-    if (!buffer) {
-    const error = new Error('Error uploading file');
+  if (!buffer) {
+    const error = new Error("Error uploading file");
     res.status = 400;
     return next(error);
   }
 
   // Stores the base64 encoded string to the DB
-  const queryResult = await updateBLOB(buffer.toString('base64'), mimetype);
+  const queryResult = await updateBLOB(buffer.toString("base64"), mimetype);
   res.status(200).json(queryResult);
 };
 
@@ -83,4 +94,5 @@ module.exports = {
   resetPassword,
   uploadProfilePic,
   getProfilePic,
+  getProfileInfo,
 };
